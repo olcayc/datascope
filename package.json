@@ -1,0 +1,42 @@
+{
+  "name": "datascope",
+  "description": "A javascript module for visualizing predictive patterns in data.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/olcayc/datascope.git",
+  "author": {
+    "name": "Olcay Cirit",
+    "email": "olcayc@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/olcayc/datascope.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olcayc/datascope/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/olcayc/datascope.git/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/datascope",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "browserify": "^3.44.2",
+    "grunt": "~0.4.4",
+    "grunt-browserify": "^2.0.8",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "keywords": []
+}

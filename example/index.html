@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>datascope - a javascript library for visualizing predictive trends in data</title>
+    <style>
+
+        svg.sparkline {
+            width: 500px;
+            height: 70px;
+            font-size: 14px;
+            margin-top: -6px;
+        }
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link href="lib/nv.d3.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/bootstrap.min.css">
+
+    <script src="lib/jquery2-0-2.min.js"></script>
+    <script src="lib/jquery.parse.min.js"></script>
+
+    <script src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script src="lib/bootstrap-3.1.1-dist/bootstrap.file-input.js"></script>
+
+    <script src="lib/d3.v3.js"></script>
+    <script src="lib/nv.d3.min.js"></script>
+
+    <script src="lib/utils.js"></script>
+    <script src="lib/sparkline.js"></script>
+    <script src="lib/sparklinePlus.js"></script>
+
+    <script src="datascope.browser.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header">
+        <span class="h1 glyphicon glyphicon-stats"><small> </small>datascope</span>
+            <p>a javascript library for visualizing predictive trends in data</p>
+    </div>
+    <div class="btn-group">
+        <button id="example-btn" type="button" class="btn btn-default dropdown-toggle" data-style="zoom-out" data-toggle="dropdown">
+         <span id="example-btn-text">Examples </span> <span class="caret"></span>
+        </button>
+        <ul id="examples" class="dropdown-menu" role="menu">
+        </ul>
+    </div>
+    <small><i>&nbsp;&nbsp; - or - &nbsp;&nbsp;&nbsp;</i></small><input type="file" title="Choose a .CSV file" id="file">
+    <p></p>
+    <p></p>
+    <ul class="targets nav nav-pills"></ul>
+    <p></p>
+    <p></p>
+    <div id="graphs">
+    <p><span id='field1' class="label label-default"></span><svg id="chart1" class="sparkline"></svg></p>
+    <p><span id='field2' class="label label-default"></span><svg id="chart2" class="sparkline"></svg></p>
+    <p><span id='field3' class="label label-default"></span><svg id="chart3" class="sparkline"></svg></p>
+    <p><span id='field4' class="label label-default"></span><svg id="chart4" class="sparkline"></svg></p>
+    <p><span id='field5' class="label label-default"></span><svg id="chart5" class="sparkline"></svg></p>
+    <p><span id='field6' class="label label-default"></span><svg id="chart6" class="sparkline"></svg></p>
+    <p><span id='field7' class="label label-default"></span><svg id="chart7" class="sparkline"></svg></p>
+    <p><span id='field8' class="label label-default"></span><svg id="chart8" class="sparkline"></svg></p>
+    <p><span id='field9' class="label label-default"></span><svg id="chart9" class="sparkline"></svg></p>
+    <p><span id='field10' class="label label-default"></span><svg id="chart10" class="sparkline"></svg></p>
+    <p><span id='field11' class="label label-default"></span><svg id="chart11" class="sparkline"></svg></p>
+    <p><span id='field12' class="label label-default"></span><svg id="chart12" class="sparkline"></svg></p>
+    <p><span id='field13' class="label label-default"></span><svg id="chart13" class="sparkline"></svg></p>
+    <p><span id='field14' class="label label-default"></span><svg id="chart14" class="sparkline"></svg></p>
+    <p><span id='field15' class="label label-default"></span><svg id="chart15" class="sparkline"></svg></p>
+    <p><span id='field16' class="label label-default"></span><svg id="chart16" class="sparkline"></svg></p>
+    <p><span id='field17' class="label label-default"></span><svg id="chart17" class="sparkline"></svg></p>
+    <p><span id='field18' class="label label-default"></span><svg id="chart18" class="sparkline"></svg></p>
+    <p><span id='field19' class="label label-default"></span><svg id="chart19" class="sparkline"></svg></p>
+    <p><span id='field20' class="label label-default"></span><svg id="chart20" class="sparkline"></svg></p>
+    <p><span id='field21' class="label label-default"></span><svg id="chart21" class="sparkline"></svg></p>
+    <p><span id='field22' class="label label-default"></span><svg id="chart22" class="sparkline"></svg></p>
+    <p><span id='field23' class="label label-default"></span><svg id="chart23" class="sparkline"></svg></p>
+    <p><span id='field24' class="label label-default"></span><svg id="chart24" class="sparkline"></svg></p>
+    <p><span id='field25' class="label label-default"></span><svg id="chart25" class="sparkline"></svg></p>
+    <p><span id='field26' class="label label-default"></span><svg id="chart26" class="sparkline"></svg></p>
+    <p><span id='field27' class="label label-default"></span><svg id="chart27" class="sparkline"></svg></p>
+    <p><span id='field28' class="label label-default"></span><svg id="chart28" class="sparkline"></svg></p>
+    <p><span id='field29' class="label label-default"></span><svg id="chart29" class="sparkline"></svg></p>
+    <p><span id='field30' class="label label-default"></span><svg id="chart30" class="sparkline"></svg></p>
+    <p><span id='field31' class="label label-default"></span><svg id="chart31" class="sparkline"></svg></p>
+    <p><span id='field32' class="label label-default"></span><svg id="chart32" class="sparkline"></svg></p>
+    <p><span id='field33' class="label label-default"></span><svg id="chart33" class="sparkline"></svg></p>
+    <p><span id='field34' class="label label-default"></span><svg id="chart34" class="sparkline"></svg></p>
+    <p><span id='field35' class="label label-default"></span><svg id="chart35" class="sparkline"></svg></p>
+    <p><span id='field36' class="label label-default"></span><svg id="chart36" class="sparkline"></svg></p>
+    <p><span id='field37' class="label label-default"></span><svg id="chart37" class="sparkline"></svg></p>
+    <p><span id='field38' class="label label-default"></span><svg id="chart38" class="sparkline"></svg></p>
+    <p><span id='field39' class="label label-default"></span><svg id="chart39" class="sparkline"></svg></p>
+    </div>
+</div>
+</body>
+</html>
