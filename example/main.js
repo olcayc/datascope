@@ -3,30 +3,54 @@ var DATA = {};
 var sampleDataFiles = [
     {
         title: " Wine Quality ",
+        desc: "A collection of measurements made on thousands of Portuguese wines, " +
+              "along with a subjective quality assessment made by a panel of tasters. " +
+              "You can see interesting patterns such as higher alcohol content " +
+              "leading to higher perception of quality and lower residual sugars.",
+        orig: "http://archive.ics.uci.edu/ml/datasets/Wine+Quality",
         link: "data/wine-quality-dataset.csv"
     },
     {
         title: " Car MPG ",
+        desc: "A comparison of car performance from the 90s. It shows " +
+              "that increased weight, displacement, cylinders, and cycles all lead to fewer miles per " +
+            "gallon",
+        orig: "http://archive.ics.uci.edu/ml/datasets/Auto+MPG",
         link: "data/auto-mpg-dataset.csv"
     },
     {
         title: " CPU Performance ",
+        desc: "A comparison of computer performance. Not surprisingly, performance goes up "+
+              "with increased main memory and cache size. ",
+        orig: "http://archive.ics.uci.edu/ml/datasets/Computer+Hardware",
         link: "data/cpu-perf-dataset.csv"
     },
     {
         title: " Median Home Price ",
+        desc: " Concerns housing prices in suburbs of Boston ",
+        orig: "http://archive.ics.uci.edu/ml/datasets/Housing",
         link: "data/home-price-dataset.csv"
     },
     {
         title: " Parkinsons Severity ",
+        desc:  "A comparison of features in a patient's voice that may be correlated with Parkinsons Severity (total_UPDRS). " +
+        "Shimmer is a class of features capturing fluctuations in the volume of speech, while jitter captures changes in frequency. ",
+        orig: "http://archive.ics.uci.edu/ml/datasets/Parkinsons+Telemonitoring",
         link: "data/parkinsons-dataset.csv"
     },
     {
         title: " Forest Fire Area ",
+        desc: "A dataset of variables that may be correlated with the observed area of forest fires in a " +
+            "national park. Not surprisingly, the presence of rain correlated negatively with the area of " +
+            "any fire",
+        orig: "http://archive.ics.uci.edu/ml/datasets/Forest+Fires",
         link: "data/forest-fire-dataset.csv"
     },
     {
-        title: " Bike Share Usage ",
+        title:" Bike Share Usage ",
+        desc: " Daily records of participation and membership in a community bike sharing program. " +
+        "Notably, usage goes up on warmer days but down on windy and very humid days. ",
+        orig: "http://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset",
         link: "data/bike-sharing-dataset.csv"
     }
 ];
@@ -48,6 +72,8 @@ $(function () {
             $('#file').parse({
                 before: function (file, inputElem) {
                     $('#example-btn-text').text(' Examples ');
+                    $('#description-text').empty();
+                    $('#description-link').empty();
                     pauseUI(true);
                 },
                 error: function (err, file, elem) {
@@ -81,6 +107,10 @@ function loadSampleFiles () {
                 .click(function() {
                     $('span.file-input-name').empty();
                     $('#example-btn-text').text('Example: ' + this.innerText);
+                    $('#description-text').text(sampleDataFiles[index].desc);
+                    $('#description-link')
+                        .text('(source)')
+                        .attr('href',(sampleDataFiles[index].orig));
                     newData($.parse(data,csvParseConfig));
                 })
                 .appendTo($('ul#examples'))
