@@ -52,6 +52,24 @@ var sampleDataFiles = [
         "Notably, usage goes up on warmer days but down on windy and very humid days. ",
         orig: "http://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset",
         link: "data/bike-sharing-dataset.csv"
+    },
+    {
+        title:" Banknote Forgery ",
+        desc: " This dataset looks at various statistics of scanned images of banknotes to detect forgeries. ",
+        orig: "http://archive.ics.uci.edu/ml/datasets/banknote+authentication",
+        link: "data/banknote-authentication-dataset.csv"
+    },
+    {
+        title: " Breast Cancer ",
+        desc: " This dataset attempts to distinguish between benign and malignant mammography masses.",
+        orig: "http://archive.ics.uci.edu/ml/datasets/Mammographic+Mass",
+        link: "data/breast-cancer-dataset.csv"
+    },
+    {
+        title: " Diabetes Risk Factors ",
+        desc: " This dataset was collected from a sample of Pima indians, an ethnic group at high risk for diabetes. ",
+        orig: "http://archive.ics.uci.edu/ml/datasets/Pima+Indians+Diabetes ",
+        link: "data/diabetes-dataset.csv"
     }
 ];
 
